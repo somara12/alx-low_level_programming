@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Display lowercase
  *
@@ -6,9 +7,11 @@
  */
 int main(void)
 {
-	char c;
-	for (c = 'a'; c <= 'z'; ++c)
+    char c;
+
+    for (c = 'a'; c <= 'z'; ++c)
 	putchar("%c " , c);
+
 	putchar("\n");
     return (0);
 }
