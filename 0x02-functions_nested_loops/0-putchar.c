@@ -1,17 +1,21 @@
 #include"main.h"
 
 /**
- * main - Prints _putchar
+ * main - Entry point
  *
- * Return: Always 0.
- */
+ * Description: prints _putchar using putchar
+ *
+ * Return: Always 0 (Success)
+*/
+
 int main(void)
 {
-	char c = "_putchar";
+	char str[] = "_putchar";
+	int ch;
 
-	{
-		_putchar(c);
-	}
+	for (ch = 0; ch < 8; ++ch)
+		_putchar(str[ch]);
 	_putchar('\n');
+
 	return (0);
 }
