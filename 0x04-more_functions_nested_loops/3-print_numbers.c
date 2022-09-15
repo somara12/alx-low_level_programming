@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * print_numbers -  checks for checks for a digit (0 through 9).
@@ -7,11 +7,11 @@ include "main.h"
  */
 void print_numbers(void)
 {
-	int a;
+	int c;
 
-	for (a = 48; a < 58; a++)
+	for (c = 48; c < 58; c++)
 	{
-		_putchar(a);
+	_putchar(c);
 	}
 	_putchar('\n');
 }
