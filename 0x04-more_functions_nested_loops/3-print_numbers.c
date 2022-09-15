@@ -1,19 +1,18 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_most_numbers -  prints numbers.
  *
  * Return: Always 0.
  */
-
-void print_numbers(void)
+void print_most_numbers(void)
 {
-     int i;
+        int a;
 
-	for (i = 0; i <= 9; ++i)
-{
-	_putchar("%d ", i);
-	_putchar("\n");
+	for (a = 48; a < 58; a++)
+	{
+		_putchar(a);
+	}
+	_putchar('\n');
 }
-	return 0;
-}
+
