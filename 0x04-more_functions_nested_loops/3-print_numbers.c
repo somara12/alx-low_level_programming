@@ -1,16 +1,17 @@
-#include "main.h"
+include "main.h"
 
 /**
- * print_most_numbers -  prints numbers.
+ * print_numbers -  checks for checks for a digit (0 through 9).
  *
  * Return: Always 0.
  */
-
 void print_numbers(void)
 {
-	int i = 0;
+	int a;
 
-	for (i = 0; i < 10; i++)
-		_putchar(i + '0');
+	for (a = 48; a < 58; a++)
+	{
+		_putchar(a);
+	}
 	_putchar('\n');
 }
