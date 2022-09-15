@@ -1,46 +1,65 @@
 #include "main.h"
 
 /**
- * print_number -  number have.
- * @n: n -  Variable
- * Return: Always 0.
+ * print_number - prints an integer
+ * @n: integer to be printed
  */
 void print_number(int n)
 {
-	unsigned int z;
-	int m, b;
+	int x = n;
+	int digit;
+	int places = 1000000000;
 
-	b = 10;
-
-	if (n < 10 && n >= 0)
+	if (n < 0)
 	{
-		_putchar (n + '0');
-	}
-	else if (n > -10 && n < 0)
-	{
-		n = n - 2 * n;
+		x = -n;
 		_putchar('-');
-		_putchar (n + '0');
 	}
-
+	if (n == INT_MAX || n == INT_MIN)
+	{
+		while (1)
+		{
+			if (n == INT_MAX)
+			{
+				_putchar('2');
+				_putchar('1');
+				_putchar('4');
+				_putchar('7');
+				_putchar('4');
+				_putchar('8');
+				_putchar('3');
+				_putchar('6');
+				_putchar('4');
+				_putchar('7');
+				break;
+			}
+			else if (n == INT_MIN)
+			{
+				_putchar('2');
+				_putchar('1');
+				_putchar('4');
+				_putchar('7');
+				_putchar('4');
+				_putchar('8');
+				_putchar('3');
+				_putchar('6');
+				_putchar('4');
+				_putchar('8');
+				break;
+			}
+		}
+	}
+	else if (n == 0)
+		_putchar('0');
 	else
 	{
-		if (n < 0)
+		while (places > x)
+			places /= 10;
+		while (places > 0)
 		{
-			n = n * -1;
-			_putchar ('-');
+			digit = x / places;
+			_putchar((digit % 10) + '0');
+			places /= 10;
 		}
-		z = n;
-	while (z / b > 9)
-	{
-		b = b * 10;
-	}
-	while (b > 0)
-	{
-		m = z / b;
-		z = z % b;
-		_putchar (m + '0');
-		b = b / 10;
-	}
 	}
 }
