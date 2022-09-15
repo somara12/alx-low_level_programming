@@ -5,15 +5,13 @@
  *
  * Return: Always 0.
  */
-void print_most_numbers(void)
-{
-        int a;
 
-	for (a = 48; a <= 57; a++)
-	{
-		_putchar(a);
-	}
+void print_numbers(void)
+{
+	int i = 0;
+
+	for (i = 0; i < 10; i++)
+		_putchar(i + '0');
 	_putchar('\n');
-	return 0;
 }
 
