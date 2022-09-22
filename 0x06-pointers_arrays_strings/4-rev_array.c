@@ -8,11 +8,13 @@ include "main.h"
 
 void reverse_array(int *a, int n)
 {
-int tmp, index;
-for (index = n - 1; index > n / 2; index--)
-{
-tmp = a[n - 1 - index];
-a[n - 1 - index] = a[index];
-a[index] = tmp;
-}
+	int x, y, z;
+
+	for ((x = 0, y = n - 1); x < y; x++, y--)
+	{
+		z = a[x];
+		a[x] = a[y];
+		a[y] = z;
+
+	}
 }
