@@ -32,5 +32,4 @@ char *_strdup(char *str)
 	hrd[nedu] = '\0';
 
 	return (hrd);
-
 }
