@@ -5,31 +5,33 @@
 *space in memory, which contains a copy of the
 *string given as a parameter.
 *@str:String to be copied
-*Return: On error NULL, pointer to allocated
+*
+*Return: NULL in case of error, pointer to allocated
 *space
 */
 
 char *_strdup(char *str)
 {
-	char *hrd;
-	int c, nedu;
+	char *cpy;
+	int index, len;
 
 	if (str == NULL)
 		return (NULL);
 
-	for (c = 0; str[c]; c++)
+	for (index = 0; str[index]; index++)
 		len++;
-	hrd = malloc(sizeof(char) * (nedu + 1));
+	cpy = malloc(sizeof(char) * (len + 1));
 
-	if (hrd == NULL)
+	if (cpy == NULL)
 		return (NULL);
 
-	for (c = 0; str[c]; c++)
+	for (index = 0; str[index]; index++)
 	{
-		hrd[c] = str[c];
+		cpy[index] = str[index];
 	}
 
-	hrd[nedu] = '\0';
+	cpy[len] = '\0';
 
-	return (hrd);
+	return (cpy);
+
 }
